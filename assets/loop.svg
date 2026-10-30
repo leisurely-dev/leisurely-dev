@@ -25,6 +25,13 @@
     </path>
   </g>
 
+  <path id="dotpath" d="M 203 96 H 703" fill="none" stroke="none"/>
+  <circle r="3.5" fill="#00c6ff" filter="url(#glow)">
+    <animateMotion dur="3.8s" repeatCount="indefinite">
+      <mpath href="#dotpath"/>
+    </animateMotion>
+  </circle>
+
   <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
     <rect x="33" y="64" width="170" height="64" rx="14" fill="url(#box)" stroke="#22415a"/>
     <text x="118" y="104" text-anchor="middle" fill="#00c6ff" font-size="16">reason</text>
@@ -35,13 +42,6 @@
     <rect x="703" y="64" width="170" height="64" rx="14" fill="url(#box)" stroke="#22415a"/>
     <text x="788" y="104" text-anchor="middle" fill="#00c6ff" font-size="16">observe</text>
   </g>
-
-  <circle r="3.5" fill="#00c6ff" filter="url(#glow)">
-    <animateMotion dur="3.8s" repeatCount="indefinite">
-      <mpath href="#dotpath"/>
-    </animateMotion>
-  </circle>
-  <path id="dotpath" d="M 203 96 H 703" fill="none" stroke="none"/>
 
   <text x="450" y="198" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#4e667a" letter-spacing="0.5">loop until done, or until the step budget runs out</text>
 </svg>
