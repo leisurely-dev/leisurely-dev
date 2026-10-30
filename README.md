@@ -14,6 +14,8 @@ I build small systems around language models and try to keep them boring enough 
 
 Most of my time goes into agent loops with tight retry boundaries, inference on hardware I own instead of renting, and eval suites small enough to read in one sitting.
 
+Off the clock it is the same instinct pointed at my own rack: Proxmox backups I have actually restored from, an OpenWrt box doing more than it should, and the occasional postmortem of a server that picked a bad hour to fall over. Some of that ends up in [forensics-notes](https://github.com/leisurely-dev/forensics-notes).
+
 <div align="center">
 <br />
 <img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/divider.svg" width="100%" height="2" />
@@ -70,6 +72,17 @@ Most of my time goes into agent loops with tight retry boundaries, inference on 
 - [huggingface/transformers](https://github.com/huggingface/transformers) mostly to check what the tokenizer just did to my input
 - [BerriAI/litellm](https://github.com/BerriAI/litellm) one interface, twelve providers, twelve sets of quirks
 - [ollama/ollama](https://github.com/ollama/ollama) the fastest way to get something running locally before I overthink it
+
+<div align="center">
+<br />
+<img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/divider.svg" width="100%" height="2" />
+</div>
+
+### Lately
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/activity.svg" width="880" alt="recent activity" />
+</div>
 
 <div align="center">
 <br />

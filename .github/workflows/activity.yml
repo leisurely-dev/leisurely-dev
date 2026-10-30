@@ -1,0 +1,32 @@
+name: activity card
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render the card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/gen_stats.py
+
+      - name: Commit if it changed
+        run: |
+          if [ -z "$(git status --porcelain assets/activity.svg)" ]; then
+            echo "no change, nothing to do"
+            exit 0
+          fi
+          git config user.name "leisurely"
+          git config user.email "winston_cn@yeah.net"
+          git add assets/activity.svg
+          git commit -m "chore: refresh activity card"
+          git push
