@@ -1,49 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200" role="img" aria-label="agent loop">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="210" viewBox="0 0 900 210" role="img" aria-label="agent loop: reason, tool call, observe">
   <defs>
-    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00c6ff" stop-opacity="0.15"/>
-      <stop offset="50%" stop-color="#00c6ff" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#00c6ff" stop-opacity="0.15"/>
-    </linearGradient>
     <linearGradient id="box" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#16232e"/>
+      <stop offset="0%" stop-color="#17242f"/>
       <stop offset="100%" stop-color="#0d1419"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
+    <filter id="glow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <path id="lane" d="M 205 100 H 320 A 30 30 0 0 1 350 70 H 400 A 30 30 0 0 0 430 100 H 620 A 30 30 0 0 1 650 130 H 700" fill="none"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f6b8a"/>
+    </marker>
   </defs>
 
-  <rect width="900" height="200" fill="none"/>
-
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#c9d1d9">
-    <rect x="40" y="68" width="165" height="64" rx="12" fill="url(#box)" stroke="#1f3a4d"/>
-    <text x="122" y="105" text-anchor="middle" fill="#00c6ff">reason</text>
-
-    <rect x="367" y="68" width="165" height="64" rx="12" fill="url(#box)" stroke="#1f3a4d"/>
-    <text x="449" y="105" text-anchor="middle" fill="#00c6ff">tool call</text>
-
-    <rect x="694" y="68" width="165" height="64" rx="12" fill="url(#box)" stroke="#1f3a4d"/>
-    <text x="776" y="105" text-anchor="middle" fill="#00c6ff">observe</text>
+  <g stroke="#2f6b8a" stroke-width="1.4" fill="none">
+    <path d="M 203 96 H 363" stroke-dasharray="5 6" marker-end="url(#arrow)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-110" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 543 96 H 703" stroke-dasharray="5 6" marker-end="url(#arrow)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-110" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 786 132 V 158 Q 786 172 772 172 H 128 Q 114 172 114 158 V 136" stroke-dasharray="3 7" stroke-opacity="0.75" marker-end="url(#arrow)">
+      <animate attributeName="stroke-dashoffset" from="0" to="100" dur="3.4s" repeatCount="indefinite"/>
+    </path>
   </g>
 
-  <path d="M 205 100 H 320 A 30 30 0 0 1 350 70 H 400 A 30 30 0 0 0 430 100 H 620 A 30 30 0 0 1 650 130 H 700"
-        fill="none" stroke="url(#edge)" stroke-width="1.5" stroke-dasharray="6 6">
-    <animate attributeName="stroke-dashoffset" from="0" to="-120" dur="3.2s" repeatCount="indefinite"/>
-  </path>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+    <rect x="33" y="64" width="170" height="64" rx="14" fill="url(#box)" stroke="#22415a"/>
+    <text x="118" y="104" text-anchor="middle" fill="#00c6ff" font-size="16">reason</text>
 
-  <path d="M 695 82 V 150 Q 695 168 675 168 H 500 Q 482 168 482 150" fill="none" stroke="#1f3a4d" stroke-width="1.2" stroke-dasharray="4 8"/>
+    <rect x="363" y="64" width="180" height="64" rx="14" fill="url(#box)" stroke="#22415a"/>
+    <text x="453" y="104" text-anchor="middle" fill="#00c6ff" font-size="16">tool call</text>
 
-  <circle r="4" fill="#00c6ff" filter="url(#glow)">
-    <animateMotion dur="4.2s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#lane"/>
+    <rect x="703" y="64" width="170" height="64" rx="14" fill="url(#box)" stroke="#22415a"/>
+    <text x="788" y="104" text-anchor="middle" fill="#00c6ff" font-size="16">observe</text>
+  </g>
+
+  <circle r="3.5" fill="#00c6ff" filter="url(#glow)">
+    <animateMotion dur="3.8s" repeatCount="indefinite">
+      <mpath href="#dotpath"/>
     </animateMotion>
   </circle>
+  <path id="dotpath" d="M 203 96 H 703" fill="none" stroke="none"/>
 
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5b7183">
-    <text x="256" y="128" text-anchor="middle">step &#8804; 8</text>
-    <text x="776" y="168" text-anchor="middle">budget</text>
-  </g>
+  <text x="450" y="198" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#4e667a" letter-spacing="0.5">loop until done, or until the step budget runs out</text>
 </svg>
