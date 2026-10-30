@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b0f14,40:14304a,100:00c6ff&height=210&section=header&text=leisurely&fontSize=72&fontColor=ffffff&fontAlignY=36&desc=agents%20%C2%B7%20inference%20%C2%B7%20evals&descAlign=50&descAlignY=58&descSize=19&animation=fadeIn" width="100%" />
+<img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/hero.svg" width="100%" alt="leisurely, agents, inference, evals" />
 
 <a href="https://github.com/leisurely-dev">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=21&pause=900&color=00C6FF&center=true&vCenter=true&width=640&lines=keep+the+loop+small;measure+before+you+ship;delete+half+of+it" alt="typing" />
@@ -13,9 +13,8 @@ I build small systems around language models and try to keep them boring enough 
 Most of my time goes into agent loops with tight retry boundaries, inference on hardware I own instead of renting, and eval suites small enough to read in one sitting.
 
 <div align="center">
-
+<br />
 <img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/divider.svg" width="100%" height="2" />
-
 </div>
 
 ### What I'm working on
@@ -30,8 +29,6 @@ Most of my time goes into agent loops with tight retry boundaries, inference on 
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/loop.svg" width="820" alt="agent loop" />
-
-<sub><i>the only diagram I keep redrawing</i></sub>
 
 </div>
 
@@ -49,9 +46,8 @@ Most of my time goes into agent loops with tight retry boundaries, inference on 
 </details>
 
 <div align="center">
-
+<br />
 <img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/divider.svg" width="100%" height="2" />
-
 </div>
 
 ### Toolbox
@@ -72,23 +68,21 @@ Most of my time goes into agent loops with tight retry boundaries, inference on 
 </div>
 
 <div align="center">
-
+<br />
 <img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/divider.svg" width="100%" height="2" />
-
 </div>
 
 ### Constantly open in a tab
 
-- [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) — still the best place to learn what inference actually costs
-- [vllm-project/vllm](https://github.com/vllm-project/vllm) — paged attention, and the scheduler bugs that come with it
-- [huggingface/transformers](https://github.com/huggingface/transformers) — mostly to check what the tokenizer just did to my input
-- [BerriAI/litellm](https://github.com/BerriAI/litellm) — one interface, twelve providers, twelve sets of quirks
-- [ollama/ollama](https://github.com/ollama/ollama) — the fastest way to get something running locally before I overthink it
+- [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) is still the best place to see what inference actually costs
+- [vllm-project/vllm](https://github.com/vllm-project/vllm) for paged attention, and the scheduler bugs that come with it
+- [huggingface/transformers](https://github.com/huggingface/transformers) mostly to check what the tokenizer just did to my input
+- [BerriAI/litellm](https://github.com/BerriAI/litellm) one interface, twelve providers, twelve sets of quirks
+- [ollama/ollama](https://github.com/ollama/ollama) the fastest way to get something running locally before I overthink it
 
 <div align="center">
-
+<br />
 <img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/divider.svg" width="100%" height="2" />
-
 </div>
 
 ### Elsewhere
@@ -105,4 +99,4 @@ Most of my time goes into agent loops with tight retry boundaries, inference on 
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00c6ff,60:14304a,100:0b0f14&height=120&section=footer" width="100%" />
+<img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/footer.svg" width="100%" />
