@@ -8,9 +8,9 @@
 
 </div>
 
-I build small systems around language models and try to keep them boring enough to debug. Most of what I care about sits in the unglamorous middle: how a tool call actually fails, what an eval is quietly not measuring, why the p99 got worse after a harmless refactor.
+I build small systems around language models and try to keep them boring enough to debug. What I actually care about sits in the unglamorous middle: how a tool call fails at 3am, what an eval is quietly not measuring, why the p99 got worse after a refactor that touched nothing.
 
-Lately that means agent loops with tight retry boundaries, inference on hardware I actually own, and eval harnesses that fit on one screen.
+Most of my time goes into agent loops with tight retry boundaries, inference on hardware I own instead of renting, and eval suites small enough to read in one sitting.
 
 <div align="center">
 
@@ -22,18 +22,26 @@ Lately that means agent loops with tight retry boundaries, inference on hardware
 
 | | |
 |---|---|
-| **Agents** | Tool-use loops, state machines instead of free-form ReAct, hard caps on steps and spend |
+| **Agents** | Tool-use loops, explicit state machines instead of free-form ReAct, hard caps on steps and spend |
 | **Inference** | Quantized local serving, batching, speculative decoding, KV cache pressure |
-| **Evals** | Small hand-written suites that catch regressions, not leaderboard cosplay |
+| **Evals** | Hand-written suites that catch regressions instead of leaderboard cosplay |
 | **Retrieval** | Chunking strategies, hybrid search, reranker latency budgets |
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/leisurely-dev/leisurely-dev/main/assets/loop.svg" width="820" alt="agent loop" />
+
+<sub><i>the only diagram I keep redrawing</i></sub>
+
+</div>
 
 <details>
 <summary><b>things I keep re-learning the hard way</b></summary>
 
 <br />
 
-- A prompt is a program. It needs version control, tests, and a diff review.
-- Most reports of "the model got worse" trace back to a tokenizer or template change upstream.
+- A prompt is a program. It needs version control, tests, and someone to review the diff.
+- Most reports of "the model got worse" trace back to a tokenizer or chat template change upstream.
 - Retries without idempotency just multiply the bill.
 - If an eval can't fail, it isn't an eval.
 - The fastest model is the one you didn't call.
@@ -55,10 +63,11 @@ Lately that means agent loops with tight retry boundaries, inference on hardware
 <br /><br />
 
 <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=000" />
-<img src="https://img.shields.io/badge/vLLM-1a1a1a?style=flat-square&logo=v&logoColor=fff" />
 <img src="https://img.shields.io/badge/llama.cpp-2b2b2b?style=flat-square&logo=llama&logoColor=fff" />
+<img src="https://img.shields.io/badge/vLLM-1a1a1a?style=flat-square&logo=v&logoColor=fff" />
 <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=fff" />
 <img src="https://img.shields.io/badge/Qdrant-DC244C?style=flat-square&logo=qdrant&logoColor=fff" />
+<img src="https://img.shields.io/badge/nginx-009639?style=flat-square&logo=nginx&logoColor=fff" />
 
 </div>
 
@@ -68,22 +77,13 @@ Lately that means agent loops with tight retry boundaries, inference on hardware
 
 </div>
 
-### Numbers
+### Constantly open in a tab
 
-<div align="center">
-
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=leisurely-dev&show_icons=true&hide_border=true&bg_color=0b0f14&title_color=00c6ff&icon_color=00c6ff&text_color=c9d1d9&include_all_commits=true&count_private=true" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=leisurely-dev&layout=compact&hide_border=true&bg_color=0b0f14&title_color=00c6ff&text_color=c9d1d9&langs_count=8" />
-
-<br />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=leisurely-dev&hide_border=true&background=0b0f14&stroke=14304a&ring=00c6ff&fire=00c6ff&currStreakLabel=00c6ff&sideLabels=c9d1d9&dates=8b949e" />
-
-<br />
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=leisurely-dev&bg_color=0b0f14&color=c9d1d9&line=00c6ff&point=ffffff&area=true&hide_border=true&custom_title=Contribution%20graph" width="96%" />
-
-</div>
+- [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) — still the best place to learn what inference actually costs
+- [vllm-project/vllm](https://github.com/vllm-project/vllm) — paged attention, and the scheduler bugs that come with it
+- [huggingface/transformers](https://github.com/huggingface/transformers) — mostly to check what the tokenizer just did to my input
+- [BerriAI/litellm](https://github.com/BerriAI/litellm) — one interface, twelve providers, twelve sets of quirks
+- [ollama/ollama](https://github.com/ollama/ollama) — the fastest way to get something running locally before I overthink it
 
 <div align="center">
 
@@ -97,7 +97,7 @@ Lately that means agent loops with tight retry boundaries, inference on hardware
 
 <a href="mailto:winston_cn@yeah.net"><img src="https://img.shields.io/badge/email-0b0f14?style=for-the-badge&logo=maildotru&logoColor=00c6ff" /></a>
 <a href="https://github.com/leisurely-dev?tab=repositories"><img src="https://img.shields.io/badge/repos-0b0f14?style=for-the-badge&logo=github&logoColor=00c6ff" /></a>
-<a href="https://github.com/leisurely-dev?tab=stars"><img src="https://img.shields.io/badge/stars-0b0f14?style=for-the-badge&logo=githubsponsors&logoColor=00c6ff" /></a>
+<a href="https://github.com/leisurely-dev?tab=stars"><img src="https://img.shields.io/badge/starred-0b0f14?style=for-the-badge&logo=githubsponsors&logoColor=00c6ff" /></a>
 
 <br /><br />
 
